@@ -1,0 +1,249 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="./static/css/all.css" rel="stylesheet" />
+    <link href="metaTags.html" rel="license" />
+</head>
+
+<body>
+    <div class="preload">
+        <div class="preload-circle"></div>
+    </div>
+    <div class="container" id="homepage">
+        <h2 class="animate-appear-top-bottom" style="--delay: 1">
+            Head or Tails?
+        </h2>
+        <h2 class="animate-appear-right-left" style="--delay: 2">
+            <h2>Wallet: <span id="wallet"></span></h2>
+          </h2>
+    
+        <button
+            id="buttonPlay"
+            class="btPlay animate-appear-top-bottom"
+            style="--delay: 2"
+            onclick="show('homepage','headTails')"
+        >
+            Play
+        </button>
+    </div>
+
+    <!-- NOVO JOGO DE CARA OU COROA -->
+    <div class="container" id="headTails" style="display: none">
+        <div class="animate-appear-top-bottom" style="--delay: 1">
+            <h2>Total Balance: <strong class="contractbalance"></strong></h2>
+        </div>
+        <div class="animate-appear-top-bottom" style="--delay: 2">
+            <h2><strong id="valorpremio"></strong> of prize</h2>
+        </div>
+        <div
+            id="tails-img"
+            class="animate-appear-top-bottom"
+            style="--delay: 3"
+        ></div>
+        <div class="animate-appear-top-bottom" style="--delay: 4">
+            <button
+                id="btnDeposit"
+                class="btPlay"
+                type="button"
+                onclick="show('headTails','loading')"
+            >
+                Deposit
+            </button>
+            <button
+                id="btnSetPercPremio"
+                class="btPlay"
+                type="button"
+                onclick="show('headTails','loading')"
+            >
+                Perc Premio
+            </button>
+
+            <button
+                id="btnSetBonusAddress"
+                class="btPlay"
+                type="button"
+                onclick="show('headTails','loading')"
+            >
+                Set Address 
+            </button>
+
+            <button
+                id="btnSetModulo"
+                class="btPlay"
+                type="button"
+                onclick="show('headTails','loading')"
+            >
+                Set Modulo
+            </button>
+
+            <button
+                id="btnGetModulo"
+                class="btPlay"
+                type="button"
+                onclick="show('headTails','loading')"
+            >
+                get Modulo
+            </button>
+
+            <button
+                id="btnEmergencyWithdrawal"
+                class="btPlay"
+                type="button"
+                onclick="show('headTails','loading')"
+            >
+                emergency
+            </button>
+            
+
+        </div>
+        <button
+            type="button"
+            class="btPlay btNav animate-appear-top-bottom"
+            id="btInsights"
+            onclick="show('headTails','insights')"
+            style="--delay: 5"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#fff"
+            >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                    d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"
+                />
+            </svg>
+        </button>
+
+        <button
+            type="button"
+            class="btPlay animate-appear-top-bottom btNav"
+            id="btBack"
+            onclick="back('headTails','homepage')"
+            style="--delay: 5"
+        >
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <path
+                    fill="#fff"
+                    d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                />
+            </svg>
+        </button>
+    </div>
+
+    <!-- PÁGINA DE LOADING -->
+    <div class="container" id="loading" style="display: none">
+        <div class="container">
+            <div>
+                <h1>Processing...</h1>
+                <h2>Please, verify your wallet</h2>
+            </div>
+            <div class="preload-circle"></div>
+        </div>
+    </div>
+
+    <!-- PÁGINA DE INSIGHTS -->
+    <div class="container" id="insights" style="display: none">
+        <div class="container">
+            <div class="animate-appear-right-left" style="--delay: 1">
+                <h1>Insights</h1>
+            </div>
+            <div id="insights-info">
+                <div class="animate-appear-right-left" style="--delay: 2">
+                    <h2>
+                        Total Balance: <strong class="contractbalance"></strong>
+                    </h2>
+                </div>
+                <div class="animate-appear-right-left" style="--delay: 3">
+                    <h2>Estimated Prize: <strong class="prize"></strong></h2>
+                </div>
+                <div class="animate-appear-right-left" style="--delay: 4">
+                    <h2>Times played: <strong id="qtdeplayers"></strong></h2>
+                </div>
+                <div class="animate-appear-right-left" style="--delay: 5">
+                    <h2>Winners: <strong id="qtdewinners"></strong></h2>
+                </div>
+                <div class="animate-appear-right-left" style="--delay: 6">
+                    <h2>Prize %: <strong id="percpremio"></strong></h2>
+                </div>
+                <div class="animate-appear-right-left" style="--delay: 7">
+                    <h2>Bonus %: <strong id="percbonus"></strong></h2>
+                </div>
+                <div class="animate-appear-right-left" style="--delay: 8">
+                    <h2>Given prizes: <strong id="premiototal"></strong></h2>
+                </div>
+            </div>
+            <button
+                type="button"
+                class="btPlay btNav animate-appear-right-left"
+                id="btBackInsights"
+                onclick="back('insights','headTails')"
+                style="--delay: 9"
+            >
+                Back to game
+            </button>
+        </div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+    <!-- custom -->
+    <script src="index.js"></script>
+    <script src="js/utils.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            getPremioEstimado();
+            getPercPremio();
+            getPercBonus();
+            getBalance();
+            getPrice();
+            getPremioTotal();
+            getQtdePlayers();
+            getQtdeWinners();
+
+            document
+                .querySelector("#btnDeposit")
+                .addEventListener("click", () => deposit());
+            document
+                .querySelector("#btnSetPercPremio")
+                .addEventListener("click", () => setPercPremio());
+            document
+                .querySelector("#btnSetBonusAddress")
+                .addEventListener("click", () => setBonusAddress());
+            document
+                .querySelector("#btnSetModulo")
+                .addEventListener("click", () => setModulo());
+            document
+                .querySelector("#btnGetModulo")
+                .addEventListener("click", () => getModulo());
+            document
+                .querySelector("#btnEmergencyWithdrawal")
+                .addEventListener("click", () => emergencyWithdrawal());
+                
+        })();
+
+        window.addEventListener("load", () => {
+            document.querySelector(".preload").classList.add("loaded");
+        });
+
+        function show(atual, destino) {
+            document.querySelector("#" + atual).style.display = "none";
+            document.querySelector("#" + destino).style.display = "flex";
+            document.querySelector("#btBack").style.display = "unset";
+            document.querySelector("#btInsights").style.display = "unset";
+        }
+
+        function back(atual, destino) {
+            document.querySelector("#" + atual).style.display = "none";
+            document.querySelector("#" + destino).style.display = "flex";
+        }
+    </script>
+</body>

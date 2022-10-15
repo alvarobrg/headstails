@@ -1,0 +1,350 @@
+<head>
+  <!-- SEO Geral -->
+  <meta
+    name="description"
+    content="Head or Tails DApp on Polygon MATIC Mainnet"
+  />
+  <link rel="canonical" href="http://headstails.site/" />
+  <meta name="author" content="DeFi & Crypto" />
+  <meta name="robots" content="index" />
+
+  <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="Head or Tails on Polygon MATIC Mainnet" />
+  <meta
+    itemprop="description"
+    content="Head or Tails DApp on Polygon MATIC Mainnet"
+  />
+  <meta itemprop="image" content="https://exemplo.com/imagem.png" />
+
+  <!-- Facebook -->
+  <meta property="og:title" content="Head or Tails DApp on Polygon MATIC Mainnet" />
+  <meta
+    property="og:description"
+    content="Head or Tails DApp on Polygon MATIC Mainnet."
+  />
+  <meta property="og:url" content="http://headstails.site/" />
+  <meta property="og:site_name" content="Head or Tails DApp on Polygon MATIC Mainnet." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://exemplo.com/imagem.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:title" content="Head or Tails DApp on Polygon MATIC Mainnet" />
+  <meta
+    name="twitter:description"
+    content="Head or Tails DApp on Polygon MATIC Mainnet"
+  />
+  <meta name="twitter:url" content="http://headstails.site" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://exemplo.com/imagem.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Head or Tails on Polygon MATIC Mainnet</title>
+  <link href="./static/css/all.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="preload">
+    <div class="preload-circle"></div>
+  </div>
+  <div class="container" id="homepage">
+    <div class="title">
+      <h1 class="animate-appear-top-bottom" style="--delay: 1">
+        ?  Head or Tails  ?
+      </h1>
+      <h1 class="animate-appear-top-bottom" style="--delay: 1">
+        on Polygon Mainnet
+      </h1>
+      <h2 class="animate-appear-top-bottom" style="--delay: 2">
+        bet and win some MATIC! It's <span>easy</span>, safe, and
+        <span>reliable!</span>
+      </h2>
+      <h2 class="animate-appear-right-left" style="--delay: 2">
+        <h2>Sua Wallet: <span id="wallet"></span></h2>
+      </h2>
+
+    </div>
+    <div class="cta-wrapper animate-appear-top-bottom" style="--delay: 3">
+      <h2>Let's start?</h2>
+      <button
+        id="buttonPlay"
+        class="btPlay"
+        onclick="show('homepage','headTails')"
+      >
+        Play
+      </button>
+
+    </div>
+
+    <div id="social" style="--delay: 4" class="animate-appear-top-bottom">
+      <h3>
+        <a href="https://drive.google.com/file/d/1IDeu0VE3jB1He2_U5m_04un5sGD8Qgiy/view?usp=sharing" target="_blank"> How it works </a>
+      </h3>
+
+      <h3>Check out our social media</h3>
+      <div class="social-links">
+        <a href="https://t.me/deficryptomoon" target="_blank" rel="noopener">
+          <img src="static/img/Telegram.svg" alt="Telegram" />
+        </a>
+
+        <a href="https://twitter.com/DeFiCryptoMoon" target="_blank" rel="noopener">
+          <img src="static/img/Twitter.svg" alt="Twitter" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOVO JOGO DE CARA OU COROA -->
+  <div class="container" id="headTails" style="display: none">
+    <div class="animate-appear-top-bottom" style="--delay: 1">
+      <div class="title">
+        <h1>Head or Tails,</h1>
+        <h2>which one do you choose??</h2>
+      </div>
+    </div>
+    <div class="values-wrapper animate-appear-top-bottom" style="--delay: 2">
+      <div class="value-text-wrapper">
+        <h2>
+          MATIC Balance:
+          <span
+            ><strong class="contractbalance"></strong
+            ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 38.4 33.5" style="enable-background:new 0 0 38.4 33.5;" xml:space="preserve">
+         <style type="text/css">
+           .st0{fill:#8247E5;}
+         </style>
+         <g>
+           <path class="st0" d="M29,10.2c-0.7-0.4-1.6-0.4-2.4,0L21,13.5l-3.8,2.1l-5.5,3.3c-0.7,0.4-1.6,0.4-2.4,0L5,16.3
+             c-0.7-0.4-1.2-1.2-1.2-2.1v-5c0-0.8,0.4-1.6,1.2-2.1l4.3-2.5c0.7-0.4,1.6-0.4,2.4,0L16,7.2c0.7,0.4,1.2,1.2,1.2,2.1v3.3l3.8-2.2V7
+             c0-0.8-0.4-1.6-1.2-2.1l-8-4.7c-0.7-0.4-1.6-0.4-2.4,0L1.2,5C0.4,5.4,0,6.2,0,7v9.4c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7
+             c0.7,0.4,1.6,0.4,2.4,0l5.5-3.2l3.8-2.2l5.5-3.2c0.7-0.4,1.6-0.4,2.4,0l4.3,2.5c0.7,0.4,1.2,1.2,1.2,2.1v5c0,0.8-0.4,1.6-1.2,2.1
+             L29,28.8c-0.7,0.4-1.6,0.4-2.4,0l-4.3-2.5c-0.7-0.4-1.2-1.2-1.2-2.1V21l-3.8,2.2v3.3c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7
+             c0.7,0.4,1.6,0.4,2.4,0l8.1-4.7c0.7-0.4,1.2-1.2,1.2-2.1V17c0-0.8-0.4-1.6-1.2-2.1L29,10.2z"/>
+         </g>
+         </svg>         
+          </span>
+        </h2>
+      </div>
+      <div class="value-text-wrapper">
+        <h2>
+          Prize:
+          <span
+            ><strong class="valorpremio"></strong
+            ><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 38.4 33.5" style="enable-background:new 0 0 38.4 33.5;" xml:space="preserve">
+         <style type="text/css">
+           .st0{fill:#8247E5;}
+         </style>
+         <g>
+           <path class="st0" d="M29,10.2c-0.7-0.4-1.6-0.4-2.4,0L21,13.5l-3.8,2.1l-5.5,3.3c-0.7,0.4-1.6,0.4-2.4,0L5,16.3
+             c-0.7-0.4-1.2-1.2-1.2-2.1v-5c0-0.8,0.4-1.6,1.2-2.1l4.3-2.5c0.7-0.4,1.6-0.4,2.4,0L16,7.2c0.7,0.4,1.2,1.2,1.2,2.1v3.3l3.8-2.2V7
+             c0-0.8-0.4-1.6-1.2-2.1l-8-4.7c-0.7-0.4-1.6-0.4-2.4,0L1.2,5C0.4,5.4,0,6.2,0,7v9.4c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7
+             c0.7,0.4,1.6,0.4,2.4,0l5.5-3.2l3.8-2.2l5.5-3.2c0.7-0.4,1.6-0.4,2.4,0l4.3,2.5c0.7,0.4,1.2,1.2,1.2,2.1v5c0,0.8-0.4,1.6-1.2,2.1
+             L29,28.8c-0.7,0.4-1.6,0.4-2.4,0l-4.3-2.5c-0.7-0.4-1.2-1.2-1.2-2.1V21l-3.8,2.2v3.3c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7
+             c0.7,0.4,1.6,0.4,2.4,0l8.1-4.7c0.7-0.4,1.2-1.2,1.2-2.1V17c0-0.8-0.4-1.6-1.2-2.1L29,10.2z"/>
+         </g>
+         </svg> 
+          </span>
+        </h2>
+      </div>
+    </div>
+    <div
+      id="tails-img"
+      class="animate-appear-top-bottom"
+      style="--delay: 3"
+    ></div>
+    <div class="animate-appear-top-bottom" style="--delay: 4">
+      <button
+        id="btnConfirmHead"
+        class="btPlay"
+        type="button"
+        onclick="show('headTails','loading')"
+      >
+        Flip for Heads
+      </button>
+      <button
+        id="btnConfirmTail"
+        class="btPlay"
+        type="button"
+        onclick="show('headTails','loading')"
+      >
+        Flip for Tails
+      </button>
+      <h2 style="margin-top: 10px; font-size: 16px">
+        <span class="price"></span> <span> per flip</span>
+        
+        <div >
+          <h2>
+          <a href="https://drive.google.com/file/d/1IDeu0VE3jB1He2_U5m_04un5sGD8Qgiy/view?usp=sharing" target="_blank"> How it works </a>
+        </h2>
+        </div>
+
+      </h2>
+    </div>
+    <button
+      type="button"
+      class="btPlay btNav animate-appear-top-bottom"
+      id="btInsights"
+      onclick="show('headTails','insights')"
+      style="--delay: 5"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+        fill="#fff"
+      >
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path
+          d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"
+        />
+      </svg>
+    </button>
+
+    <button
+      type="button"
+      class="btPlay animate-appear-top-bottom btNav"
+      id="btBack"
+      onclick="back('headTails','homepage')"
+      style="--delay: 5"
+    >
+      <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+        <path
+          fill="#fff"
+          d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- PÁGINA DE LOADING -->
+  <div class="container" id="loading" style="display: none">
+    <div class="container">
+      <div>
+        <h1>Processing...</h1>
+        <h2>Please, verify your wallet</h2>
+      </div>
+      <div class="preload-circle"></div>
+    </div>
+  </div>
+
+  <!-- PÁGINA DE INSIGHTS -->
+  <div class="container" id="insights" style="display: none">
+    <div class="container">
+      <div class="animate-appear-right-left" style="--delay: 1">
+        <h2>Insights</h2>
+      </div>
+      <div id="insights-info">
+        <div class="animate-appear-right-left" style="--delay: 2">
+          <h2>
+            Total Balance: <strong class="contractbalance"></strong
+            ><strong> MATIC</strong>
+          </h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 3">
+          <h2>
+            Estimated Prize: <strong class="valorpremio"></strong
+            ><strong> MATIC</strong>
+          </h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 4">
+          <h2>Times played: <strong id="qtdeplayers"></strong></h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 5">
+          <h2>Winners: <strong id="qtdewinners"></strong></h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 5">
+          <h2>Level: <strong id="levelmodulo"></strong></h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 6">
+          <h2>Prize %: <strong id="percpremio"></strong></h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 7">
+          <h2>Bonus %: <strong id="percbonus"></strong></h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 8">
+          <h2>Given prizes: <strong id="premiototal"></strong></h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 8">
+          <h2> 
+            <a href="https://bit.ly/defi-matic" target="_blank"> Curso DeFi na Polygon </a> 
+          </h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 8">
+          <h2> 
+            <a href="https://bit.ly/defi-bsc" target="_blank"> Curso DeFi na BSC </a> 
+          </h2>
+        </div>
+        <div class="animate-appear-right-left" style="--delay: 8">
+            <h2> 
+              <a href="https://bit.ly/defi-eth" target="_blank"> Curso DeFi na ETH </a> 
+            </h2>
+          </div>
+
+      </div>
+      <button
+        type="button"
+        class="btPlay btNav animate-appear-right-left"
+        id="btBackInsights"
+        onclick="back('insights','headTails')"
+        style="--delay: 9"
+      >
+        Back to game
+      </button>
+    </div>
+  </div>
+
+  <div class="premiofinal" style="display: none"></div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+  <!-- custom -->
+  <script src="index.js"></script>
+  <script src="js/utils.js"></script>
+
+  <script type="text/javascript">
+    (function () {
+      getPremioEstimado();
+      getPercPremio();
+      getPercBonus();
+      getBalance();
+      getPrice();
+      getPremioTotal();
+      getQtdePlayers();
+      getQtdeWinners();
+      getPremioFinal();
+      getModulo();
+
+      document
+        .querySelector("#btnConfirmHead")
+        .addEventListener("click", () => playCaraCoroa(1));
+      document
+        .querySelector("#btnConfirmTail")
+        .addEventListener("click", () => playCaraCoroa(2));
+    })();
+
+    window.addEventListener("load", () => {
+      document.querySelector(".preload").classList.add("loaded");
+    });
+
+    function show(atual, destino) {
+      document.querySelector("#" + atual).style.display = "none";
+      document.querySelector("#" + destino).style.display = "flex";
+      document.querySelector("#btBack").style.display = "unset";
+      document.querySelector("#btInsights").style.display = "unset";
+    }
+
+    function back(atual, destino) {
+      document.querySelector("#" + atual).style.display = "none";
+      document.querySelector("#" + destino).style.display = "flex";
+    }
+
+    function reload() {
+      window.location.href = window.location.href;
+    }
+  </script>
+</body>

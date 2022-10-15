@@ -1,0 +1,23 @@
+{
+  "name": "headstails",
+  "version": "1.0.0",
+  "description": "Treinando Smart Contracts - Polygon",
+  "main": "html/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Alvaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvarobrg"
+  },
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.18.1",
+    "web3": "^1.2.6"
+  }
+}
