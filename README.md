@@ -12,3 +12,8 @@
 - Clonar o repositório
 - npm install
 - a partir da pasta src: node server.js
+
+# 3 - Smart Contract em solidity
+
+- publicado na polygon
+- pode ser "deployado" em outras EVM Ethereum
