@@ -5,13 +5,19 @@ if (window.ethereum) {
 } else if (window.web3) {
   window.web3 = new Web3(window.web3.currentProvider);
 } else {
-  const texto = `<div class="animate-appear-top-bottom" style="--delay: 1" ><h1>Non-MANTRA Dukong EVM Testnet  browser detected. You should consider trying MetaMask!</h1></div>`;
+  const texto = `<div class="animate-appear-top-bottom" style="--delay: 1" ><h1>Non-ETH Testnet browser detected. You should consider trying MetaMask!</h1></div>`;
   document.body.innerHTML = `<div class="container" id="browser">
     ${texto}
   </div>`;
 }
 
-var contractAddress = "0xAC19055781a1a32e2fEfbf93Bc880d6913170606"; //mantra dukong
+web3.eth.getChainId().then( chainId => {
+  if (chainId != 59140)
+    alert("Rede incorreta. Conecte a metamask na Linea Testnet")
+  }
+);
+
+var contractAddress = "0x16579c61c6780137B34f54a0109068b6799708eD"; //consensys zkemv Linea
 
 var abi = JSON.parse(
   '[ 	{ 		"inputs": [], 		"name": "deposit", 		"outputs": [], 		"stateMutability": "payable", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "emergencyWithdrawal", 		"outputs": [], 		"stateMutability": "nonpayable", 		"type": "function" 	}, 	{ 		"inputs": [], 		"stateMutability": "nonpayable", 		"type": "constructor" 	}, 	{ 		"anonymous": false, 		"inputs": [ 			{ 				"indexed": false, 				"internalType": "bool", 				"name": "", 				"type": "bool" 			} 		], 		"name": "LogPlay", 		"type": "event" 	}, 	{ 		"inputs": [ 			{ 				"internalType": "uint256", 				"name": "escolha", 				"type": "uint256" 			} 		], 		"name": "playCaraCoroa", 		"outputs": [ 			{ 				"internalType": "bool", 				"name": "", 				"type": "bool" 			} 		], 		"stateMutability": "payable", 		"type": "function" 	}, 	{ 		"inputs": [ 			{ 				"internalType": "address payable", 				"name": "adr", 				"type": "address" 			} 		], 		"name": "setBonusAddress", 		"outputs": [], 		"stateMutability": "nonpayable", 		"type": "function" 	}, 	{ 		"inputs": [ 			{ 				"internalType": "uint256", 				"name": "num", 				"type": "uint256" 			} 		], 		"name": "setModulo", 		"outputs": [], 		"stateMutability": "nonpayable", 		"type": "function" 	}, 	{ 		"inputs": [ 			{ 				"internalType": "uint256", 				"name": "perc", 				"type": "uint256" 			} 		], 		"name": "setPercBonus", 		"outputs": [], 		"stateMutability": "nonpayable", 		"type": "function" 	}, 	{ 		"inputs": [ 			{ 				"internalType": "uint256", 				"name": "perc", 				"type": "uint256" 			} 		], 		"name": "setPercPremio", 		"outputs": [], 		"stateMutability": "nonpayable", 		"type": "function" 	}, 	{ 		"inputs": [ 			{ 				"internalType": "uint256", 				"name": "newprice", 				"type": "uint256" 			} 		], 		"name": "setPrice", 		"outputs": [], 		"stateMutability": "nonpayable", 		"type": "function" 	}, 	{ 		"inputs": [ 			{ 				"internalType": "address", 				"name": "_newOwner", 				"type": "address" 			} 		], 		"name": "transferOwnership", 		"outputs": [], 		"stateMutability": "nonpayable", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getBalance", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getModulo", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getPercBonus", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getPercPremio", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getPremioEstimado", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getPremioTotal", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getPrice", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getQtdePlayers", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "getQtdeWinners", 		"outputs": [ 			{ 				"internalType": "uint256", 				"name": "", 				"type": "uint256" 			} 		], 		"stateMutability": "view", 		"type": "function" 	}, 	{ 		"inputs": [], 		"name": "owner", 		"outputs": [ 			{ 				"internalType": "address", 				"name": "", 				"type": "address" 			} 		], 		"stateMutability": "view", 		"type": "function" 	} ]'
@@ -32,7 +38,7 @@ web3.eth.getAccounts(function (err, accs) {
 
   if (accs.length == 0) {
     const texto = `<div class="animate-appear-top-bottom" style="--delay: 1"><h1>No account found!</h1></div>
-      <div class="animate-appear-top-bottom" style="--delay: 2"><h2>Please, connect with the <strong>MANTRA Dukong EVM Testnet Client</strong> to start playing.</h2></div>`;
+      <div class="animate-appear-top-bottom" style="--delay: 2"><h2>Please, connect with the <strong>ETH Testnet Client</strong> to start playing.</h2></div>`;
     document.body.innerHTML = `<div class="container" id="login">
       ${texto}
       <div><button class="btPlay animate-appear-top-bottom" style="--delay: 3; margin-top: 20px;" onClick="reload()">Try again</button></div>
@@ -51,7 +57,7 @@ web3.eth.getAccounts(function (err, accs) {
 
 
 function deposit(){
-  var val = 10000000000000000; // 0.01
+  var val = 1000000000000000; // 0.001
   contract.methods
     .deposit()
     .send({ from: account, value: val })
@@ -83,7 +89,7 @@ function setBonusAddress(){
 }
 
 function setModulo(){
-  var val = 2;
+  var val = 6;
   contract.methods
     .setModulo(val)
     .send({ from: account })
@@ -112,10 +118,10 @@ function emergencyWithdrawal() {
 }
 
 function playCaraCoroa(escolha) {
-  var val = 1000000000000000; //0.001
+  var val = 10000000000000; //0.0
   contract.methods
     .playCaraCoroa(escolha)
-    .send({ from: account, value: val,  maxFeePerGas: 50000000000,maxPriorityFeePerGas: 50000000000, gas: 60000 }) 
+    .send({ from: account, value: val }) 
     .then((tx) => {
 
       web3.eth.getTransactionReceipt(tx.transactionHash, (err, receipt) => {
@@ -123,7 +129,7 @@ function playCaraCoroa(escolha) {
           show("loading", "resultado");
         }
 
-        console.log(receipt.logs);
+        //console.log(receipt.logs);
 
         if (
           receipt.logs[0].data == "0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -208,7 +214,7 @@ function getPremioFinal() {
     .call()
     .then((info) => {
       let etherValue = Web3.utils.fromWei(info, "ether");
-      etherValue = Number(etherValue).toFixed(3) + " OM";
+      etherValue = Number(etherValue).toFixed(3) + " ETH";
       const premioFinal = Array.from(
         document.getElementsByClassName("premiofinal")
       );
@@ -245,7 +251,7 @@ function getPremioTotal() {
     .call()
     .then((info) => {
       let etherValue = Web3.utils.fromWei(info, "ether");
-      etherValue = Number(etherValue).toFixed(3) + " OM";
+      etherValue = Number(etherValue).toFixed(3) + " ETH";
       document.getElementById("premiototal").innerHTML = etherValue;
     });
 }
@@ -274,7 +280,7 @@ function getPrice() {
     .call()
     .then((info) => {
       let price = Web3.utils.fromWei(info, "ether");
-      price = Number(price).toFixed(3) + " OM";
+      price = Number(price).toFixed(2) + " ETH";
       const elementos = Array.from(document.getElementsByClassName("price"));
       elementos.map((e) => (e.innerHTML = price));
     });
